@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-class site():
+class Site():
     '''
     site class: TODO
     '''
