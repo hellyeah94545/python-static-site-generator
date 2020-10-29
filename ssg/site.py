@@ -1,0 +1,26 @@
+#! /usr/bin/env python3
+
+from pathlib import Path
+
+class site():
+    '''
+    site class: TODO
+    '''
+
+    def __init__(self, source, dest):
+        '''
+
+        :param source: TODO
+        :param dest: TODO
+        '''
+        self.source = Path(self.source)
+        self.dest = Path(self.dest)
+
+
+    def create_dir(self, path):
+        '''
+
+        :return: TODO
+        '''
+        directory = Path.relative_to(path, self.source)
+        Path.mkdir(directory, parents=True, exist_ok=True)
