@@ -22,5 +22,5 @@ class Site():
 
         :return: TODO
         '''
-        directory = self.dest.relative_to(self.source)
-        Path.mkdir(directory, parents=True, exist_ok=True)
+        directory = self.dest / path.relative_to(self.source)
+        directory.mkdir(parents=True, exist_ok=True)
