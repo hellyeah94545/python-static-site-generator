@@ -14,4 +14,4 @@ def main(source="content", dest="dist"):
     config = {"source": source, "dest": dest}
 
     newSite = Site(**config)
-    newSit.build()
+    newSite.build()
