@@ -12,3 +12,6 @@ def main(source="content", dest="dist"):
     :return:
     '''
     config = {"source": source, "dest": dest}
+
+    newSite = Site(**config)
+    newSit.build()
