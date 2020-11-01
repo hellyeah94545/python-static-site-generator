@@ -8,4 +8,4 @@ class Parser():
     '''
     TODO
     '''
-    extensions = []
+    extensions = List[str]
