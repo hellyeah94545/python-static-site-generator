@@ -30,4 +30,4 @@ class Parser():
         :param dest: destination path of files
         :return: None
         '''
-        raise NotImplemented
+        raise NotImplementedError
