@@ -8,4 +8,18 @@ class Parser():
     '''
     TODO
     '''
-    extensions:  List[str] = []
+
+    def __init__(self):
+        '''
+        TODO
+        '''
+        extensions:  List[str] = []
+
+    def valid_extension(self, extension):
+        '''
+        TODO
+        :return: boolean
+        '''
+        return extension in self.extensions
+
+
