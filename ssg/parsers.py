@@ -48,3 +48,5 @@ class Parser():
         :return: None
         '''
         full_path = dest / path.with_suffix(ext).name
+        with open(full_path, 'wr') as file:
+            file.write(content)
