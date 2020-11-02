@@ -35,8 +35,16 @@ class Parser():
     def read(self, path):
         '''
         Reads files
-        :return: text
+        :return: file text
         '''
 
         with open(path, 'r') as file:
             return file.read()
+
+    def write(self, path, dest, content, ext='.html'):
+        '''
+        writes contents to file
+        :param path: path of file to write
+        :return: None
+        '''
+        fullpath = self.dest / path.with_suffix(ext).name
