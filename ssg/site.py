@@ -7,7 +7,7 @@ class Site():
     site class: TODO
     '''
 
-    def __init__(self, source, dest):
+    def __init__(self, source, dest, parsers=None):
         '''
 
         :param source: TODO
@@ -15,6 +15,7 @@ class Site():
         '''
         self.source = Path(self.source)
         self.dest = Path(self.dest)
+        self.parsers = parsers or []
 
 
     def create_dir(self, path):
