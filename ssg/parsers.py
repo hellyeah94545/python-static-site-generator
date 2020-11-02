@@ -31,3 +31,12 @@ class Parser():
         :return: None
         '''
         raise NotImplementedError
+
+    def read(self, path):
+        '''
+        Reads files
+        :return: text
+        '''
+
+        with open(path, 'r') as file:
+            return file.read()
