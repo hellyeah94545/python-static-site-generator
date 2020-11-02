@@ -47,4 +47,4 @@ class Parser():
         :param path: path of file to write
         :return: None
         '''
-        full_path = self.dest / path.with_suffix(ext).name
+        full_path = dest / path.with_suffix(ext).name
