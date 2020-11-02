@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import shutil
 from typing import List
 from pathlib import Path
 
@@ -51,8 +52,9 @@ class Parser():
         with open(full_path, 'w') as file:
             file.write(content)
 
-    def copy(self):
+    def copy(self, path, source, dest):
         '''
-
+        copy contents
         :return: None
         '''
+        shutil.copy2(path, dest / source, follow_symlinks=True)
