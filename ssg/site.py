@@ -36,3 +36,13 @@ class Site():
         for path in self.source.rglob("*"):
             if path.is_dir():
                 self.create_dir(path)
+
+    def load_parser(self, extension):
+        """
+        load_parser
+        :param extension:
+        :return:
+        """
+        for parser in self.parsers:
+            if parser.valid_extension(extension):
+                return parser
