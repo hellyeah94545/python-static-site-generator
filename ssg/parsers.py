@@ -58,3 +58,26 @@ class Parser():
         :return: None
         '''
         shutil.copy2(path, dest / path.relative_to(source), follow_symlinks=True)
+
+
+class ResourceParser(Parser):
+    '''
+    TODO
+    '''
+
+    def __init__(self):
+        '''
+        class init
+        '''
+        extensions = [".jpg", ".png", ".gif", ".css", ".html"]
+
+
+    def parse(self, path: Path, source: Path, dest: Path):
+        '''
+        Base parse method for subclasses
+        :param path: path of files
+        :param source: source path of files
+        :param dest: destination path of files
+        :return: None
+        '''
+        self.copy(self, path, source, dest)
