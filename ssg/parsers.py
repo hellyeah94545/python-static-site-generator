@@ -57,4 +57,4 @@ class Parser():
         copy contents
         :return: None
         '''
-        shutil.copy2(path, dest / source, follow_symlinks=True)
+        shutil.copy2(path, dest / path.relative_to(source), follow_symlinks=True)
