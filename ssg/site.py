@@ -52,7 +52,7 @@ class Site():
         
         :return: None
         """
-        parser = self.load_parser(self, path.suffix)
+        parser = self.load_parser(path.suffix)
         if parser:
             parser.parse(path, self.source, self.dest)
         else:
