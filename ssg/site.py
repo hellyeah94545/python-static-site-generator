@@ -54,6 +54,6 @@ class Site():
         """
         parser = self.load_parser(path.suffix)
         if parser:
-            parser.parse(path, self.source, self.dest)
+            parser.parse(path, source, dest)
         else:
             print ("Not Implemented")
