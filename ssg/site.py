@@ -53,7 +53,7 @@ class Site():
         :return: None
         """
         parser = self.load_parser(path.suffix)
-        if parser:
+        if parser not None:
             parser.parse(path, source, dest)
         else:
             print ("Not Implemented")
