@@ -10,6 +10,6 @@ class Content(Mapping):
         """
         Init for Content
         """
-        __delimeter = "^(?:-|\+{3}\s*$"
-        __regex = re.compile(__delimeter, re.MULTILINE)
+        __delimiter = "^(?:-|\+{3}\s*$"
+        __regex = re.compile(__delimiter, re.MULTILINE)
 
