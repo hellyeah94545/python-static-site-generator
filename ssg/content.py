@@ -13,7 +13,8 @@ class Content(Mapping):
         __delimiter = r"^(?:-|\+){3}\s*$"
         __regex = re.compile(__delimiter, re.MULTILINE)
 
-    def load(self, cls, string):
+    @classmethod
+    def load(cls, string):
         """
         load method for Content
         :param cls:
@@ -22,5 +23,5 @@ class Content(Mapping):
         """
 
         _, fm, content = self.__regex.split(string, 2)
-        load(fm, Loader=FullLoader)
+        metadata = load(fm, Loader=FullLoader)
         return cls(metadata, content)
