@@ -26,7 +26,6 @@ class Content(Mapping):
         """
         Init for Content
         """
-
         self.data = metadata
-        content = {"content": self.data}
+        self.data["content"] = content
 
