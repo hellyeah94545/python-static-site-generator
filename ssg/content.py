@@ -6,12 +6,9 @@ from collections.abc import Mapping
 
 
 class Content(Mapping):
-    def __init__(self):
-        """
-        Init for Content
-        """
-        __delimiter = r"^(?:-|\+){3}\s*$"
-        __regex = re.compile(__delimiter, re.MULTILINE)
+
+    __delimiter = r"^(?:-|\+){3}\s*$"
+    __regex = re.compile(__delimiter, re.MULTILINE)
 
     @classmethod
     def load(cls, string):
@@ -24,3 +21,12 @@ class Content(Mapping):
         _, fm, content = cls.__regex.split(string, 2)
         metadata = load(fm, Loader=FullLoader)
         return cls(metadata, content)
+
+    def __init__(self, metadata, content):
+        """
+        Init for Content
+        """
+
+        self.data = metadata
+        content = {"content": self.data}
+
