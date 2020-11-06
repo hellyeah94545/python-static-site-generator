@@ -33,3 +33,10 @@ class Content(Mapping):
     def body(self):
         return self.data["content"]
 
+    @property
+    def type(self):
+        if "type" in self.data.keys():
+            return self.data["type"]
+        else:
+            return None
+
