@@ -27,5 +27,6 @@ class Content(Mapping):
         Init for Content
         """
         self.data = metadata
+        @property
         self.data["content"] = content
 
