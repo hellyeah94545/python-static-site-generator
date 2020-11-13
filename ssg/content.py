@@ -40,3 +40,10 @@ class Content(Mapping):
     @type.setter
     def type(self, type):
         self.data["type"] = type
+
+    def __getitem__(self, key):
+        """
+        :key: item for lookup
+        :return: self.data['key']
+        """
+        return self.data[key] if key in self.data else None
