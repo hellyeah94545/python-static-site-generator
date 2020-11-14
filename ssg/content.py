@@ -54,3 +54,10 @@ class Content(Mapping):
         :return: self.data.__iter__()
         """
         return self.data.__iter__()
+
+    def __len__(self):
+        """
+
+        :return: Return len of self.data
+        """
+        return len(self.data)
