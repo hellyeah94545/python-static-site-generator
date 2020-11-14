@@ -47,3 +47,10 @@ class Content(Mapping):
         :return: self.data['key']
         """
         return self.data[key] if key in self.data else None
+
+    def __iter__(self):
+        """
+
+        :return: self.data.__iter__()
+        """
+        return self.data.__iter__()
