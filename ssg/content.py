@@ -61,3 +61,11 @@ class Content(Mapping):
         :return: Return len of self.data
         """
         return len(self.data)
+
+    def __repr__(self):
+        """
+
+        :return: print repr
+        """
+        data = {}
+        return str(data)
