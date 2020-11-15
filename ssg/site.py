@@ -14,8 +14,8 @@ class Site():
         :param source: TODO
         :param dest: TODO
         """
-        self.source = Path(self.source)
-        self.dest = Path(self.dest)
+        self.source = Path(source)
+        self.dest = Path(dest)
         self.parsers = parsers or []
 
 
