@@ -85,3 +85,10 @@ class ResourceParser(Parser):
         :return: None
         '''
         self.copy(self, path, source, dest)
+
+
+class MarkdownParser():
+    """
+    class
+    """
+    extensions = [".md", ".markdown"]
