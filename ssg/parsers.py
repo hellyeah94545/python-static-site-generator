@@ -95,7 +95,7 @@ class MarkdownParser(Parser):
 
     def parse(self, path: Path, source: Path, dest: Path):
         '''
-        Base parse method for subclasses
+
         :param path: path of files
         :param source: source path of files
         :param dest: destination path of files
@@ -105,4 +105,25 @@ class MarkdownParser(Parser):
         html = markdown(content.body)
         self.write(path, dest, html)
         sys.stdout.write("\x1b[1;32m{} converted to HTML. Metadata: {}\n".format
+                         (path.name, content))
+
+
+class ReStructuredTextParser(Parser):
+    """
+    class
+    """
+    extensions = [".rst"]
+
+    def parse(self, path: Path, source: Path, dest: Path):
+        '''
+
+        :param path: path of files
+        :param source: source path of files
+        :param dest: destination path of files
+        :return: None
+        '''
+        content = Content.load(self.read(path))
+        html = publish_parts(content.body, writer_name="html5")
+        self.write(path, dest, html["html_body"])
+        sys.stdout.write("\x1b[1;32m{} converted to HTML. Metadata: {}\n". format
                          (path.name, content))
