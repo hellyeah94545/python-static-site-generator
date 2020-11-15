@@ -9,7 +9,7 @@ from markdown import markdown
 from ssg.content import Content
 
 
-class Parser():
+class Parser:
     '''
     TODO
     '''
@@ -87,7 +87,7 @@ class ResourceParser(Parser):
         self.copy(self, path, source, dest)
 
 
-class MarkdownParser():
+class MarkdownParser:
     """
     class
     """
