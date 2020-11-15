@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import sys
 from pathlib import Path
 
 class Site():
@@ -59,3 +60,12 @@ class Site():
             parser.parse(path, self.source, self.dest)
         else:
             print ("Not Implemented")
+
+    @staticmethod
+    def error(message):
+        """
+        class error message
+        :param message: message to display on stdout
+        :return: none
+        """
+        sys.stdout.write("\x1b[1;31m{}\n".format(message))
