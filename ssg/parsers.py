@@ -87,7 +87,7 @@ class ResourceParser(Parser):
         self.copy(self, path, source, dest)
 
 
-class MarkdownParser:
+class MarkdownParser(Parser):
     """
     class
     """
