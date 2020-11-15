@@ -101,4 +101,4 @@ class MarkdownParser(Parser):
         :param dest: destination path of files
         :return: None
         '''
-        content = content.load(self.read(path))
+        content = Content.load(self.read(path))
