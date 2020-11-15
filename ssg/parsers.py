@@ -92,3 +92,13 @@ class MarkdownParser(Parser):
     class
     """
     extensions = [".md", ".markdown"]
+
+    def parse(self, path: Path, source: Path, dest: Path):
+        '''
+        Base parse method for subclasses
+        :param path: path of files
+        :param source: source path of files
+        :param dest: destination path of files
+        :return: None
+        '''
+        content = content.load(self.read(path))
