@@ -12,7 +12,11 @@ def main(source="content", dest="dist"):
     :param dest:
     :return:
     '''
-    config = {"source": source, "dest": dest, "parsers": [ssg.parsers.ResourceParser()]}
+    config = {"source": source, "dest": dest, "parsers":
+                [ssg.parsers.ResourceParser(),
+                ssg.parsers.MarkdownParser(),
+                ssg.parsers.ReStructuredTextParser()]
+              }
     Site(**config).build()
 
 
