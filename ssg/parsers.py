@@ -68,13 +68,7 @@ class ResourceParser(Parser):
     '''
     TODO
     '''
-
-    def __init__(self):
-        '''
-        class init
-        '''
-        extensions = [".jpg", ".png", ".gif", ".css", ".html"]
-
+    extensions = [".jpg", ".png", ".gif", ".css", ".html"]
 
     def parse(self, path: Path, source: Path, dest: Path):
         '''
@@ -84,7 +78,7 @@ class ResourceParser(Parser):
         :param dest: destination path of files
         :return: None
         '''
-        self.copy(self, path, source, dest)
+        self.copy(path, source, dest)
 
 
 class MarkdownParser(Parser):
